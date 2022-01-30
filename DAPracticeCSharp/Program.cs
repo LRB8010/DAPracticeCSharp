@@ -13,7 +13,8 @@ namespace DAPracticeCSharp
             Console.WriteLine("Is it a palindrome?!");
             string input = Console.ReadLine();
             //ReverseAString(input);
-            Palindrome(input);
+            //Palindrome(input);
+            ReverseAnInt(Int32.Parse(input));
             Console.Read();
         }
         public static void ReverseAString(string str)
@@ -43,9 +44,18 @@ namespace DAPracticeCSharp
             {
                 Console.WriteLine(false);
             }
+        }
 
-          
-
+        public static void ReverseAnInt(int num)
+        {
+            string str = num.ToString();
+            string result = "";
+            for(var i = 0;i<str.Length;i++)
+            {
+              result = str[i] + result;
+            }
+            Console.WriteLine(Int32.Parse(result));
+            
         }
     }
 
